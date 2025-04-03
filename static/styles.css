@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+  }
+  
+  .out-container {
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  textarea {
+    width: 100%;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  .post-container {
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 1em;
+    margin-top: 1em;
+  }
+  
