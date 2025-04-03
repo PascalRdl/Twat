@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>twat</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="static/logo.png">
+  <link rel="stylesheet" type="text/css" href="static/styles.css">
+  <script src="static/htmx.js"></script>
+</head>
+<body>
+  <div class="out-container">
+    <div class="header-container">
+      <img src="static/logo.png" height="100px">
+      <h1>Twat</h1>
+    </div>
+    <form hx-include="find textarea" hx-post="/post" hx-target="#posts" hx-swap="afterbegin">
+      <textarea id="post-box" name="data"></textarea>
+      <button type="submit"> send </button>
+    </form>
+    <div id="posts" hx-get="/post" hx-trigger="load" hx-swap="innerHTML">
+      <div class="post-container">
+        <p>text in box</p>
+        <sup>sent: 12:13</sup>
+      </div>
+      <div class="post-container">
+        <p>text in box2</p>
+        <sup>sent: 12:18</sup>
+      </div>
+      <div class="post-container">
+        <p>content</p>
+        <sup>sent: sent Date</sup>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
